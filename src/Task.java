@@ -1,4 +1,3 @@
-package todolist;
 
 public class Task {
 	private String description = null;
