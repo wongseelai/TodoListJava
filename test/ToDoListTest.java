@@ -71,4 +71,16 @@ public class ToDoListTest {
 		Collection<Task> tasks = todoList.getCompletedTasks();
 		assertEquals(2, tasks.size());
 	}
+	
+	@Test
+	public void testUpdateTaskStatus() {
+		assertNotNull(todoList);
+		todoList.addTask(task1);
+		assertEquals(false, todoList.getStatus(task1.getDescription()));
+		String result = todoList.completeTask(task1.getDescription());
+		assertEquals("Updated successfully", result);
+		assertEquals(true, todoList.getStatus(task1.getDescription()));
+		result = todoList.completeTask(task1.getDescription());
+		assertEquals("Task already completed", result);
+	}
 }

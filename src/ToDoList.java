@@ -9,11 +9,15 @@ public class ToDoList {
 	public void addTask (Task task) {
 		tasks.put(task.getDescription(), task);
 	}
-	public void completeTask(String description) {
+	public String completeTask(String description) {
 		Task task = null;
-		if ((task = tasks.get(description)) != null){
+		task = tasks.get(description);
+		if (task != null && !task.isComplete()){
 			task.setComplete(true);
-		};
+			return "Updated successfully";
+		} else {
+			return "Task already completed";
+		}
 	}
 	public boolean getStatus(String description) {
 		Task task = null;
