@@ -107,4 +107,15 @@ public class ToDoListTest {
 		todoList.getTask(task1.getDescription()).setDeadline(deadline);
 		assertEquals(deadline, todoList.getTask(task1.getDescription()).getDeadline());
 	}
+	
+	@Test
+	public void testGetDeadline() {
+		Date today = new Date();
+		assertNotNull(todoList);
+		task1.setDeadline(today);
+		todoList.addTask(task1);
+		
+		assertEquals(today, todoList.getDeadline(task1.getDescription()));
+		
+	}
 }

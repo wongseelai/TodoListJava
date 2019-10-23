@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 public class ToDoList {
 
@@ -33,6 +34,15 @@ public class ToDoList {
 			return task.getPriority().toString();
 		};
 		return "";
+	}
+	
+	public Date getDeadline(String description) {
+		Task task = null;
+		if ((task = tasks.get(description)) != null){
+			return task.getDeadline();
+		};
+		
+		return null;
 	}
 	
 	public Task getTask(String description) {
