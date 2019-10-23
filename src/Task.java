@@ -6,6 +6,7 @@ public class Task {
 	private Date deadline = null;
 	private boolean isComplete = false;
 	private Priority priority = Priority.HIGH;
+	private String comments = null;
 	
 	
 	public Task(String description) {
@@ -56,5 +57,19 @@ public class Task {
 		this.priority = priority;
 	}
 
+	/**
+	 * @return the comments
+	 */
+	public String getComments() {
+		return comments;
+	}
+
+	/**
+	 * @param comments the comments to set
+	 */
+	public void setComments(String comments) {
+		this.comments = comments;
+	}
+	
 	
 }
