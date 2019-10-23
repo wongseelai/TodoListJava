@@ -46,6 +46,12 @@ public class ToDoListTest {
 		assertEquals(true, todoList.getStatus(task1.getDescription()));
 	}
 	@Test
+	public void testGetPriority() {
+		assertNotNull(todoList);
+		todoList.addTask(task1);
+		todoList.getPriority(task1.getDescription());
+	}
+	@Test
 	public void testRemoveTask() {
 		assertNotNull(todoList);
 		todoList.addTask(task1);

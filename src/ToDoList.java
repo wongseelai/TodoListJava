@@ -22,6 +22,15 @@ public class ToDoList {
 		};
 		return false;
 	}
+	
+	public String getPriority(String description) {
+		Task task = null;
+		if ((task = tasks.get(description)) != null){
+			return task.getPriority().toString();
+		};
+		return "";
+	}
+	
 	public Task getTask(String description) {
 		return tasks.get(description);
 	}

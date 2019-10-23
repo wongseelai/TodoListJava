@@ -5,6 +5,7 @@ public class Task {
 	private String description = null;
 	private Date deadline = null;
 	private boolean isComplete = false;
+	private Priority priority = Priority.HIGH;
 	
 	
 	public Task(String description) {
@@ -47,4 +48,13 @@ public class Task {
 		this.deadline = deadline;
 	}
 
+	public Priority getPriority() {
+		return priority;
+	}
+
+	public void setPriority(Priority priority) {
+		this.priority = priority;
+	}
+
+	
 }
