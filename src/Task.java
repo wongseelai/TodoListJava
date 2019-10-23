@@ -1,6 +1,9 @@
+import java.util.Date;
 
 public class Task {
+	private String title = null;
 	private String description = null;
+	private Date deadline = null;
 	private boolean isComplete = false;
 	
 	
@@ -26,6 +29,22 @@ public class Task {
 	}
 	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Date getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(Date deadline) {
+		this.deadline = deadline;
 	}
 
 }
